@@ -79,9 +79,13 @@ WSGI_APPLICATION = 'book_review_backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "book_review_db",
+        "USER": "book_reviews_admin",
+        "PASSWORD": "DjangoBooks",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 

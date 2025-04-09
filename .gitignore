@@ -1,5 +1,5 @@
 # Ignore Python artifacts
-*/__pycache__/*
+__pycache__/
 book-review-backend/**/*.py[cod]
 book-review-backend/*.sqlite3
 book-review-backend/db.sqlite3
