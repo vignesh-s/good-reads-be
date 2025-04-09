@@ -1,20 +1,14 @@
 # Ignore Python artifacts
 __pycache__/
-book-review-backend/**/*.py[cod]
-book-review-backend/*.sqlite3
-book-review-backend/db.sqlite3
-book-review-backend/*.log
+**/*.py[cod]
+*.sqlite3
+db.sqlite3
+*.log
 
 # Django specific
-book-review-backend/media/
-book-review-backend/staticfiles/
-book-review-backend/.env
-
-# Ignore React build and node modules
-book-review-frontend/node_modules/
-book-review-frontend/build/
-book-review-frontend/.env
-book-review-frontend/.DS_Store
+media/
+staticfiles/
+.env
 
 # Ignore IDE/editor config
 .vscode/
