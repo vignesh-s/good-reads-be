@@ -4,6 +4,12 @@ import django.db.models.deletion
 from django.db import migrations, models
 
 
+def create_default_books(apps, schema_editor):
+    Book = apps.get_model('books', 'Book')
+    Book.objects.create(title='The Power of Habit', author='Charles Duhigg', genre='Personal Development', published_year=2012)
+    Book.objects.create(title="Life's Amazing Secrets", author='Gaur Gopal Das', genre='Self Help', published_year=2018)
+    Book.objects.create(title="How to Win Friends & Influence People", author='Dale Carnegie', genre='Communication', published_year=1998)
+
 class Migration(migrations.Migration):
 
     initial = True
@@ -22,6 +28,7 @@ class Migration(migrations.Migration):
                 ('published_year', models.IntegerField()),
             ],
         ),
+        migrations.RunPython(create_default_books),
         migrations.CreateModel(
             name='Review',
             fields=[
